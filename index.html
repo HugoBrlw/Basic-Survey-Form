@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title" >Survey Form</h1> 
+    <p id="description">We are gathering data to determine which game should we next review</p>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label" >Name: <input id="name" type="text" required placeholder="Please enter your name" /></label>
+        <label for="email" id="email-label" >Email Address: <input id="email" type="email" required placeholder="Please enter your email" /></label>
+        <label for="number" id="number-label" >Cellphone Number: <input id="number" type="number" min="8" max="13" required placeholder="Please enter your number" /></label>
+        <label for="dropdown">Please select what game review you would like to see next:
+          <select id="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">League of Legends</option>
+            <option value="2">Frostpunk</option>
+            <option value="3">Baldur's Gate 3</option>
+            <option value="4">They are Billions!</option>
+          </select>       
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Should we include gameplay?</legend>
+        <label><input id="include-gameplay" name="gameplay" type="radio" class="inline" value="include-gameplay" checked />Yes</label>
+        <label for="exclude-gameplay"><input id="exclude-gameplay" name="gameplay" type="radio" class="inline" value="exlude-gameplay"/>No</label>
+      </fieldset>
+      <fieldset>
+        <label>What parts of our videos are your favourites?</label>
+        <input type="checkbox" id="guides" value="guides"><label for="guides">Build Guides</label>
+        <input type="checkbox" id="strategy" value="strategy"><label for="strategy">Build Strategy</label>
+        <input type="checkbox" id="pro-comments" value="pro-comments"><label for="pro-comments">Comments by Pros</label>
+        <input type="checkbox" id="humour" value="humour"><label for="humour">Comedy by the Presenters</label>
+      </fieldset>
+      <fieldset>
+        <label for="comments" >Additional Comments:</label><textarea id="comments" name="comments" placeholder="Any additional thoughts"></textarea>
+      </fieldset>
+      <button type="submit" id="submit">Submit Survey</button>
+    </form>
+  </body>
+</html>
